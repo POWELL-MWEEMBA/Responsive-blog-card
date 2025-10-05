@@ -1,0 +1,123 @@
+@import url(https://fonts.google.com/specimen/Figtree);
+
+/* --- Base Mobile-First Styles --- */
+/* These styles apply to ALL screen sizes unless overridden later */
+
+body {
+  font-family: "Figtree", sans-serif;
+  background-color: hsl(47, 88%, 63%);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containter {
+  min-height: 100vh; 
+  padding: 20px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; 
+}
+
+.card-container {
+  /* On mobile, the card is flexible */
+  width: 100%; 
+  max-width: 380px; 
+  padding: 24px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: white;  border: solid 1px hsl(0, 0%, 7%);
+  box-sizing: border-box; 
+}
+
+.card-header {
+  width: 100%;
+}
+
+.card-header > img {
+  width: 100%;
+  border-radius: 10px; 
+}
+
+.card-body{
+  display: block;
+  padding: 0;
+  margin: 0; 
+}
+
+.header-body {
+  display: block;
+}
+
+button {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 4px;
+  border: none;
+  background-color: hsl(47, 88%, 63%);  margin-bottom: 12px;
+}
+
+.main-body {
+  width: 100%;
+  display: block;
+}
+
+h2 {
+  font-size: 20px; 
+  font-weight: 800;
+  color: hsl(0, 0%, 7%);
+}
+
+.title > p {
+  color: hsl(0, 0%, 42%);
+  line-height: 1.5;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+}
+
+footer > img {
+  width: 32px;
+  height: 32px;
+}
+
+footer > h3 {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* --- Desktop Styles (Progressive Enhancement) --- */
+/* These styles ONLY apply when the screen width is 600px or wider */
+
+@media (min-width: 600px) {
+  .card-container {
+    /* Re-introduce the fixed width for desktop */
+    width: 384px;
+    box-shadow: 8px 8px 0px 0px hsl(0, 0%, 7%);
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+  
+  h2:hover {
+      color: hsl(47, 88%, 63%);
+      cursor: pointer;
+  }}
+
+  .attribution{
+    font-size: 24px; 
+    text-align: center; 
+    
+  }
+  a {
+    color: white; 
+  }
